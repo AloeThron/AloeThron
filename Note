@@ -1,12 +1,12 @@
 
 
-**Vite + React + Tailwind
+***Vite + React + Tailwind***
 
 npm create vite@latest my-project -- --template react
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
-tailwind.config.js
+--tailwind.config.js--
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -19,3 +19,58 @@ export default {
   },
   plugins: [],
 }
+
+--index.css--
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+***Next + React + Tailwind***
+
+npx create-next-app@latest my-project --typescript --eslint
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+--tailwind.config.js--
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+--globals.css--
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
